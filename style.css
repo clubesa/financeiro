@@ -1,0 +1,155 @@
+/* Paleta de Cores LABirintar */
+:root {
+    --bg-main: #f8f9fa;
+    --bg-card: #FFFFFF;
+    --text-dark: #212529;
+    --text-light: #495057;
+    --color-red: #ff595a;
+    --color-orange: #ffa400;
+    --color-cream: #ffe9c9;
+    --color-lavender: #e6cbe4;
+    --color-blue: #aec5e7;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+header {
+    background-color: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kpi-card {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid #e9ecef;
+}
+
+.kpi-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.kpi-card p {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-orange);
+}
+
+.chart-container {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px; /* Para a barra de rolagem não ficar colada */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-blue) #f1f1f1;
+}
+
+/* Estilizando a barra de rolagem para navegadores Webkit */
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+  background: var(--color-blue);
+  border-radius: 10px;
+}
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #8aa7cf;
+}
+
+
+.dupont-card {
+    flex: 0 0 280px; /* Não encolhe, não cresce, base de 280px */
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dupont-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.dupont-card h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 0;
+    color: var(--text-dark);
+}
+
+.dupont-card .rspl {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin: 10px 0;
+}
+
+.dupont-card .formula {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
