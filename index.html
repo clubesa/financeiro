@@ -1,8 +1,64 @@
-<div class="filter-container">
-    <label for="year-select">Selecionar Ano:</label>
-    <select name="years" id="year-select">
-        </select>
-</div>
-<div class="chart-container">
-    <canvas id="financeChart"></canvas>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABirintar - AI Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="IMG_1229.png" alt="Logo LABirintar" id="logo">
+        <h1>AI Advisor</h1>
+    </header>
+    <main>
+        <section class="content-section">
+            <h2>Dashboard Estratégico Projetado</h2>
+            <div class="kpi-container">
+                <article class="kpi-card">
+                    <h3>VPL do Projeto</h3>
+                    <p id="kpi-vpl">R$ 4.317.619</p>
+                </article>
+                <article class="kpi-card">
+                    <h3>TIR do Projeto</h3>
+                    <p id="kpi-tir">98,69%</p>
+                </article>
+                <article class="kpi-card">
+                    <h3>Receita Líquida (Ano 1)</h3>
+                    <p id="kpi-receita">R$ 2.111.859</p>
+                </article>
+                <article class="kpi-card">
+                    <h3>Saldo de Caixa Projetado (Fim Ano 1)</h3>
+                    <p id="kpi-caixa">R$ 205.271</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Evolução de Receitas e Custos</h2>
+            
+            <div class="filter-container">
+                <label for="year-select">Selecionar Ano:</label>
+                <select name="years" id="year-select">
+                    </select>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="financeChart"></canvas>
+            </div>
+        </section>
+
+         <section class="content-section">
+            <h2>Análise DuPont Anual</h2>
+            <div id="dupont-carousel" class="carousel-container">
+                </div>
+         </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
